@@ -24,8 +24,8 @@ RUN apt-get update && apt-get install -y \
     docker && \
     locales && \
     locale-gen en_US.UTF-8 && \
-    update-locale LANG=en_US.UTF-8
-    && rm -rf /var/lib/apt/lists/*
+    update-locale LANG=en_US.UTF-8 && \
+    rm -rf /var/lib/apt/lists/*
 
 
 ENV LANG=en_US.UTF-8
