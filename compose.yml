@@ -1,0 +1,63 @@
+services:
+  openldap:
+    image: bitnami/openldap:latest
+    container_name: myldap
+    ports:
+      - 1389:1389
+      - 1636:1636
+    environment:
+      - LDAP_ADMIN_USERNAME=admin
+      - LDAP_ADMIN_PASSWORD=ldap_admin_password
+      - LDAP_USERS=user01,user02,user03
+      - LDAP_PASSWORDS=user01_password,user02_password,user03_password
+    networks:
+      - my-network
+    volumes:
+      - openldap_data:/bitnami/openldap
+    secrets:
+      - ldap_admin_password
+      - user01_password
+      - user02_password
+      - user03_password
+
+  my-server1:
+    image: custom-server
+    container_name: my-server1
+    networks:
+      - my-network
+    ports:
+      - 1422:22
+
+  my-server2:
+    image: custom-server
+    container_name: my-server2
+    networks:
+      - my-network
+    ports:
+      - 1522:22
+
+  my-server3:
+    image: custom-server
+    container_name: my-server3
+    networks:
+      - my-network
+    ports:
+      - 1622:22
+
+networks:
+  my-network:
+    driver: bridge
+
+volumes:
+  openldap_data:
+    driver: local
+
+secrets:
+  ldap_admin_password:
+    environment: "LDAP_ADMIN_PASSWORD"
+  user01_password:
+    environment: "USER01_PASSWORD"
+  user02_password:
+    environment: "USER02_PASSWORD"
+  user03_password:
+    environment: "USER03_PASSWORD"
