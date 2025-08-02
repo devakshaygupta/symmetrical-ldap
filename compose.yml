@@ -12,7 +12,7 @@ services:
     volumes:
       - openldap_data:/bitnami/openldap:z
     healthcheck:
-      test: ["CMD", "ldapsearch", "-x", "-H", "ldap://localhost", "-b", "dc=example,dc=com"]
+      test: ["CMD", "ldapsearch", "-x", "-H", "ldap://localhost", "-b", "dc=akshaygupta,dc=click"]
       interval: 30s
       timeout: 10s
       retries: 3
