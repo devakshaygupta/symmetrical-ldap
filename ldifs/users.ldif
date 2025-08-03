@@ -1,55 +1,60 @@
+version: 1
+
 dn: cn=user01,ou=users,dc=akshaygupta,dc=click
 objectClass: inetOrgPerson
 objectClass: posixAccount
 objectClass: shadowAccount
 cn: user01
-cn: User1
-gidNumber: 1000
-homeDirectory: /home/user01
 sn: Bar1
 uid: user01
 uidNumber: 1000
-userPassword:: cGFzc3dvcmQx
+gidNumber: 1000
+homeDirectory: /home/user01
+loginShell: /usr/bin/bash
+userPassword: cGFzc3dvcmQx
 
 dn: cn=user02,ou=users,dc=akshaygupta,dc=click
 objectClass: inetOrgPerson
 objectClass: posixAccount
 objectClass: shadowAccount
 cn: user02
-cn: User2
-gidNumber: 1001
-homeDirectory: /home/user02
 sn: Bar2
 uid: user02
 uidNumber: 1001
+gidNumber: 1001
+homeDirectory: /home/user02
 loginShell: /usr/bin/bash
-userPassword:: cGFzc3dvcmQy
-
-dn: cn=user03,ou=users,dc=akshaygupta,dc=click
-objectClass: inetOrgPerson
-objectClass: posixAccount
-objectClass: shadowAccount
-cn: user03
-cn: User3
-gidNumber: 1002
-homeDirectory: /home/user03
-sn: Bar3
-uid: user03
-uidNumber: 1002
-loginShell: /usr/bin/bash
-userPassword:: cGFzc3dvcmQz
+userPassword: cGFzc3dvcmQy
 
 dn: cn=johncena,ou=users,dc=akshaygupta,dc=click
 objectClass: inetOrgPerson
 objectClass: posixAccount
 objectClass: shadowAccount
 cn: John Cena
-cn: johncena
-gidNumber: 1004
-homeDirectory: /home/jcena
-sn: Bar1
+cn:johncena
+sn: Cena
 uid: jcena
 uidNumber: 1004
+gidNumber: 1004
+homeDirectory: /home/jcena
 loginShell: /usr/bin/bash
-userPassword:: cGFzc3dvcmQx
+userPassword: cGFzc3dvcmQz
 
+# Admin group
+dn: cn=admins,ou=Groups,dc=your,dc=example,dc=com
+objectClass: top
+objectClass: posixGroup
+cn: admins
+description: Group for admins
+gidNumber: 2000
+memberUid: jcena
+
+# Developer group
+dn: cn=developers,ou=Groups,dc=your,dc=example,dc=com
+objectClass: top
+objectClass: posixGroup
+cn: developers
+description: Group for admins
+gidNumber: 2000
+memberUid: user01
+memberUid: user02

@@ -1,11 +1,9 @@
-dn: cn=readers,ou=groups,dc=akshaygupta,dc=click
-objectClass: groupOfNames
-cn: readers
-member: cn=user01,ou=users,dc=akshaygupta,dc=click
-member: cn=user02,ou=users,dc=akshaygupta,dc=click
-member: cn=user03,ou=users,dc=akshaygupta,dc=click
+version: 1
 
-dn: cn=admins,ou=groups,dc=akshaygupta,dc=click
-objectClass: groupOfNames
+# Admin group
+dn: cn=admins,ou=Groups,dc=your,dc=example,dc=com
+objectClass: top
+objectClass: posixGroup
 cn: admins
-member: cn=johncena,ou=users,dc=akshaygupta,dc=click
+description: Group for admins
+gidNumber: 2000
