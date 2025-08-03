@@ -1,0 +1,7 @@
+dn: cn=my-server3,ou=servers,dc=akshaygupta,dc=click
+objectClass: top
+objectClass: ipHost
+objectClass: device
+cn: my-server3
+ipHostNumber: 10.89.0.5
+description: Ansible-managed LDAP client

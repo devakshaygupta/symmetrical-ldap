@@ -1,0 +1,11 @@
+dn: cn=readers,ou=groups,dc=akshaygupta,dc=click
+objectClass: groupOfNames
+cn: readers
+member: cn=user01,ou=users,dc=akshaygupta,dc=click
+member: cn=user02,ou=users,dc=akshaygupta,dc=click
+member: cn=user03,ou=users,dc=akshaygupta,dc=click
+
+dn: cn=admins,ou=groups,dc=akshaygupta,dc=click
+objectClass: groupOfNames
+cn: admins
+member: cn=johncena,ou=users,dc=akshaygupta,dc=click
