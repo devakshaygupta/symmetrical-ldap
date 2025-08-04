@@ -40,21 +40,3 @@ homeDirectory: /home/jcena
 loginShell: /usr/bin/bash
 userPassword: cGFzc3dvcmQz
 
-# Admin group
-dn: cn=admins,ou=Groups,dc=your,dc=example,dc=com
-objectClass: top
-objectClass: posixGroup
-cn: admins
-description: Group for admins
-gidNumber: 2000
-memberUid: jcena
-
-# Developer group
-dn: cn=developers,ou=Groups,dc=your,dc=example,dc=com
-objectClass: top
-objectClass: posixGroup
-cn: developers
-description: Group for admins
-gidNumber: 2000
-memberUid: user01
-memberUid: user02
