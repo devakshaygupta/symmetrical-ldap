@@ -1,0 +1,16 @@
+Collecting python-ldap
+  Using cached python-ldap-3.4.4.tar.gz (377 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: pyasn1>=0.3.7 in ./.venv/lib/python3.9/site-packages (from python-ldap) (0.6.1)
+Collecting pyasn1_modules>=0.1.5 (from python-ldap)
+  Using cached pyasn1_modules-0.4.2-py3-none-any.whl.metadata (3.5 kB)
+Using cached pyasn1_modules-0.4.2-py3-none-any.whl (181 kB)
+Building wheels for collected packages: python-ldap
+  Building wheel for python-ldap (pyproject.toml): started
+  Building wheel for python-ldap (pyproject.toml): finished with status 'error'
+Failed to build python-ldap

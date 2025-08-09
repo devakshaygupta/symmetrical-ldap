@@ -19,36 +19,11 @@ dn: ou=servers,dc=akshaygupta,dc=click
 objectClass: organizationalUnit
 ou: servers
 
-dn: cn=my-server1,ou=servers,dc=akshaygupta,dc=click
-objectClass: device
-objectClass: ipHost
-objectClass: top
-cn: my-server1
-ipHostNumber: 10.89.0.3
-description: Ansible-managed LDAP client
-
-dn: cn=my-server2,ou=servers,dc=akshaygupta,dc=click
-objectClass: device
-objectClass: ipHost
-objectClass: top
-cn: my-server2
-ipHostNumber: 10.89.0.4
-description: Ansible-managed LDAP client
-
-dn: cn=my-server3,ou=servers,dc=akshaygupta,dc=click
-objectClass: device
-objectClass: ipHost
-objectClass: top
-cn: my-server3
-ipHostNumber: 10.89.0.5
-description: Ansible-managed LDAP client
-
 dn: cn=user01,ou=users,dc=akshaygupta,dc=click
 objectClass: inetOrgPerson
 objectClass: posixAccount
 objectClass: shadowAccount
 cn: user01
-gidNumber: 1000
 homeDirectory: /home/user01
 sn: Bar1
 uid: user01
@@ -61,7 +36,6 @@ objectClass: inetOrgPerson
 objectClass: posixAccount
 objectClass: shadowAccount
 cn: user02
-gidNumber: 1001
 homeDirectory: /home/user02
 sn: Bar2
 uid: user02
@@ -75,7 +49,6 @@ objectClass: posixAccount
 objectClass: shadowAccount
 cn: John Cena
 cn: johncena
-gidNumber: 1004
 homeDirectory: /home/jcena
 sn: Cena
 uid: jcena
